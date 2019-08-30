@@ -32,12 +32,12 @@
         },
         "triggers": [
           {
-            "resourceName": "apigusEast1TestAPItestany",
-            "config": {}
-          },
-          {
-            "resourceName": "cweKTestSQSRule1",
-            "config": {}
+            "resourceName": "s3as2TestLahiru",
+            "config": {
+              "type": "s3:ObjectCreated:*",
+              "keyPrefix": "",
+              "keySuffix": ""
+            }
           }
         ]
       }
@@ -49,50 +49,6 @@
     ],
     "currentFileId": "fe739e57-de18-459d-a5e5-3ee0a4b0e665",
     "resources": {
-      "apigusEast1TestAPItestany": {
-        "name": "apigusEast1TestAPItestany",
-        "type": "API_GATEWAY",
-        "config": {
-          "selectedRegion": "us-east-1",
-          "apiMode": 1,
-          "apiName": "TestAPI",
-          "apiId": "0itznun7w3",
-          "endpointType": "EDGE",
-          "rootResourceId": "h2lelj6j7k",
-          "existingResources": {
-            "/test": "1aztfv",
-            "/test/janaka": "3zhfku",
-            "/MyLambda": "98nqbj",
-            "/test/foo": "alrh6s",
-            "/": "h2lelj6j7k",
-            "/newchange/test": "k6pdhn",
-            "/newchange": "q1ox7l",
-            "/testWithSlash": "q4m4g1",
-            "/testtwospeciallambda": "q4szm3",
-            "/testtwospecialkumutest": "wey3lk"
-          },
-          "resourceMode": 1,
-          "resourcePath": "/test",
-          "resourceName": "test",
-          "resourceId": "1aztfv",
-          "restMethod": "ANY",
-          "proxyIntegration": false,
-          "enableCORS": false,
-          "stageMode": 1,
-          "stageName": "test",
-          "stageDeploymentId": "qtlfty",
-          "mode": 1
-        }
-      },
-      "cweKTestSQSRule1": {
-        "name": "cweKTestSQSRule1",
-        "type": "CLOUD_WATCH",
-        "config": {
-          "mode": 1,
-          "arn": "arn:aws:events:us-east-1:318300609668:rule/KTestSQSRule1",
-          "name": "KTestSQSRule1"
-        }
-      },
       "s3as2TestLahiru": {
         "name": "s3as2TestLahiru",
         "type": "S3",
@@ -102,6 +58,15 @@
             "region": "us-east-1",
             "name": "as2-test-lahiru"
           }
+        }
+      },
+      "cweKTestSQSRule1": {
+        "name": "cweKTestSQSRule1",
+        "type": "CLOUD_WATCH",
+        "config": {
+          "mode": 1,
+          "arn": "arn:aws:events:us-east-1:318300609668:rule/KTestSQSRule1",
+          "name": "KTestSQSRule1"
         }
       }
     },
@@ -130,7 +95,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1567162290017
+    "lastSave": 1567162374830
   },
   "VCS_STATE": {
     "provider": "GitHub",
