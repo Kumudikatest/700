@@ -38,6 +38,10 @@
               "keyPrefix": "",
               "keySuffix": ""
             }
+          },
+          {
+            "resourceName": "apigusEast1TestAPItestany",
+            "config": {}
           }
         ]
       }
@@ -121,7 +125,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1567162117108
+    "lastSave": 1567162212502
   },
   "VCS_STATE": {
     "provider": "GitHub",
