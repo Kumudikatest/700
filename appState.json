@@ -32,8 +32,12 @@
         },
         "triggers": [
           {
-            "resourceName": "apigusEast1TestAPItestany",
-            "config": {}
+            "resourceName": "s3as2TestLahiru",
+            "config": {
+              "type": "s3:ObjectCreated:*",
+              "keyPrefix": "",
+              "keySuffix": ""
+            }
           }
         ]
       }
@@ -45,6 +49,17 @@
     ],
     "currentFileId": "fe739e57-de18-459d-a5e5-3ee0a4b0e665",
     "resources": {
+      "s3as2TestLahiru": {
+        "name": "s3as2TestLahiru",
+        "type": "S3",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "region": "us-east-1",
+            "name": "as2-test-lahiru"
+          }
+        }
+      },
       "apigusEast1TestAPItestany": {
         "name": "apigusEast1TestAPItestany",
         "type": "API_GATEWAY",
@@ -106,7 +121,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1567162071583
+    "lastSave": 1567162117108
   },
   "VCS_STATE": {
     "provider": "GitHub",
