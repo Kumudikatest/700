@@ -32,14 +32,23 @@
         },
         "triggers": [
           {
-            "resourceName": "s3as2TestLahiru",
-            "config": {
-              "type": "s3:ObjectCreated:*",
-              "keyPrefix": "",
-              "keySuffix": ""
-            }
+            "resourceName": "apigusEast1TestAPItestany",
+            "config": {}
+          },
+          {
+            "resourceName": "cweKTestSQSRule1",
+            "config": {}
           }
-        ]
+        ],
+        "testCases": {
+          "9bf43dbe-4434-4334-bb04-c8f3416b8557": {
+            "id": "9bf43dbe-4434-4334-bb04-c8f3416b8557",
+            "name": "Test event",
+            "functionId": "fe739e57-de18-459d-a5e5-3ee0a4b0e665",
+            "event": "{\r\n    \"header\": {\r\n        \"messageId\": \"9484BF6A-854E-47B8-86CB-54B22F15740D\",\r\n        \"name\": \"TurnOnRequest\",\r\n        \"namespace\": \"Alexa.ConnectedHome.Control\",\r\n        \"payloadVersion\": \"2\"\r\n    },\r\n    \"payload\": {\r\n        \"accessToken\": \"1\",\r\n        \"appliance\": {\r\n            \"additionalApplianceDetails\": {},\r\n            \"applianceId\": \"unique-id-for-non-dimmable-bulb-specific-to-user1\"\r\n        }\r\n    }\r\n}",
+            "eventTemplate": "alexa-smart-home-smart-home-control-turn-on-request"
+          }
+        }
       }
     },
     "deletedFiles": [],
@@ -49,15 +58,39 @@
     ],
     "currentFileId": "fe739e57-de18-459d-a5e5-3ee0a4b0e665",
     "resources": {
-      "s3as2TestLahiru": {
-        "name": "s3as2TestLahiru",
-        "type": "S3",
+      "apigusEast1TestAPItestany": {
+        "name": "apigusEast1TestAPItestany",
+        "type": "API_GATEWAY",
         "config": {
-          "mode": 1,
-          "bucket": {
-            "region": "us-east-1",
-            "name": "as2-test-lahiru"
-          }
+          "selectedRegion": "us-east-1",
+          "apiMode": 1,
+          "apiName": "TestAPI",
+          "apiId": "0itznun7w3",
+          "endpointType": "EDGE",
+          "rootResourceId": "h2lelj6j7k",
+          "existingResources": {
+            "/test": "1aztfv",
+            "/test/janaka": "3zhfku",
+            "/MyLambda": "98nqbj",
+            "/test/foo": "alrh6s",
+            "/": "h2lelj6j7k",
+            "/newchange/test": "k6pdhn",
+            "/newchange": "q1ox7l",
+            "/testWithSlash": "q4m4g1",
+            "/testtwospeciallambda": "q4szm3",
+            "/testtwospecialkumutest": "wey3lk"
+          },
+          "resourceMode": 1,
+          "resourcePath": "/test",
+          "resourceName": "test",
+          "resourceId": "1aztfv",
+          "restMethod": "ANY",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 1,
+          "stageName": "test",
+          "stageDeploymentId": "qtlfty",
+          "mode": 1
         }
       },
       "cweKTestSQSRule1": {
@@ -67,6 +100,17 @@
           "mode": 1,
           "arn": "arn:aws:events:us-east-1:318300609668:rule/KTestSQSRule1",
           "name": "KTestSQSRule1"
+        }
+      },
+      "s3as2TestLahiru": {
+        "name": "s3as2TestLahiru",
+        "type": "S3",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "region": "us-east-1",
+            "name": "as2-test-lahiru"
+          }
         }
       }
     },
@@ -95,7 +139,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1567162374830
+    "lastSave": 1567162693646
   },
   "VCS_STATE": {
     "provider": "GitHub",
