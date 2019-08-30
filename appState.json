@@ -1,0 +1,77 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "bad9a1c0-8107-4080-ba95-53845f54bf6f": {
+        "id": "bad9a1c0-8107-4080-ba95-53845f54bf6f",
+        "parent": null,
+        "name": "700",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "fe739e57-de18-459d-a5e5-3ee0a4b0e665"
+        ],
+        "isRemovable": false,
+        "filePath": "700"
+      },
+      "fe739e57-de18-459d-a5e5-3ee0a4b0e665": {
+        "id": "fe739e57-de18-459d-a5e5-3ee0a4b0e665",
+        "parent": "bad9a1c0-8107-4080-ba95-53845f54bf6f",
+        "name": "lambda.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "700/lambda.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "bad9a1c0-8107-4080-ba95-53845f54bf6f",
+    "openFiles": [
+      "fe739e57-de18-459d-a5e5-3ee0a4b0e665"
+    ],
+    "currentFileId": "fe739e57-de18-459d-a5e5-3ee0a4b0e665",
+    "resources": {},
+    "customTemplate": {
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "700",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1567161889783
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "700",
+      "url": "https://github.com/Kumudikatest/700"
+    }
+  }
+}
